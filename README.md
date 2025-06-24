@@ -1,6 +1,14 @@
 Recipe Finder
 Recipe Finder is a simple React app built with Next.js for searching recipes with filters by name, cuisine, and preparation time. The project uses Tailwind CSS for styling, Axios for API requests, and react-hot-toast for notifications.
 
+🔑 Environment Variables
+Before running the app, create a .env.local file in the root of your project with the following:
+
+```env
+SPOONACULAR_API_KEY=your_api_key_here
+You can get your free API key from Spoonacular API.
+```
+
 📦 Installation & Running
 
 1. Clone the repository

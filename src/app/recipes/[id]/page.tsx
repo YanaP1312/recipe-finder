@@ -1,4 +1,6 @@
 'use client';
+
+import Image from 'next/image';
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { useParams } from 'next/navigation';
@@ -10,9 +12,17 @@ interface Ingredient {
   unit: string;
 }
 
+interface Recipe {
+  id: number;
+  title: string;
+  image: string;
+  summary: string;
+  extendedIngredients: Ingredient[];
+}
+
 export default function RecipePage() {
   const { id } = useParams<{ id: string }>();
-  const [recipe, setRecipe] = useState<any>(null);
+  const [recipe, setRecipe] = useState<Recipe | null>(null);
 
   useEffect(() => {
     const fetchRecipe = async () => {
@@ -32,9 +42,11 @@ export default function RecipePage() {
   return (
     <div className="p-4 max-w-3xl mx-auto">
       <h1 className="text-3xl font-bold mb-4">{recipe.title}</h1>
-      <img
+      <Image
         src={recipe.image}
         alt={recipe.title}
+        width={500}
+        height={300}
         className="w-full rounded mb-4"
       />
 
