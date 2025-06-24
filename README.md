@@ -1,36 +1,100 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+Recipe Finder
+Recipe Finder is a simple React app built with Next.js for searching recipes with filters by name, cuisine, and preparation time. The project uses Tailwind CSS for styling, Axios for API requests, and react-hot-toast for notifications.
 
-## Getting Started
+📦 Installation & Running
 
-First, run the development server:
+1. Clone the repository
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+ git clone https://github.com/your-username/recipe-finder.git
+ cd recipe-finder
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Install dependencies
+   ```bash
+   npm install
+   ```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+# or
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+yarn install
 
-## Learn More
+````
 
-To learn more about Next.js, take a look at the following resources:
+3. Run in development mode
+```bash
+npm run dev
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+# or
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+yarn dev
+````
 
-## Deploy on Vercel
+Open http://localhost:3000 in your browser.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+4. Build and run in production
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+   ```bash
+
+   npm run build
+   npm start
+   ```
+
+# or
+
+yarn build
+yarn start
+
+````
+
+🚀 Features
+1. Search recipes by keyword.
+
+2. Filter by cuisine type (Italian, Japanese, American, etc.).
+
+3. Filter by maximum preparation time.
+
+4. Display recipe list with images and titles.
+
+5. View detailed recipe info (summary, ingredients, etc.).
+
+6. Input validation with error notifications.
+
+7. Responsive design using Tailwind CSS.
+
+🏗️ Architecture & Technologies
+Next.js (App Router, client components): routing and server-side rendering.
+
+React hooks (useState, useEffect): state management and side effects.
+
+Axios: API data fetching.
+
+React-hot-toast: user notifications.
+
+Tailwind CSS: utility-first styling and responsive layouts.
+
+API routes: custom backend endpoints for fetching recipe data.
+
+📁 Project Structure
+```bash
+/app
+/recipes
+[id].tsx - recipe detail page
+page.tsx - recipe list page with filters
+page.tsx - home page with search form
+/components
+RecipeCard.tsx - recipe card component (optional)
+/styles
+globals.css - global styles (Tailwind)
+/api
+recipes.ts - API routes for recipes
+````
+
+⚙️ Possible Improvements
+Add more filter options.
+
+Implement pagination for recipe lists.
+
+Enhance UI/UX with animations.
+
+Integrate with external recipe APIs (e.g., Spoonacular).
