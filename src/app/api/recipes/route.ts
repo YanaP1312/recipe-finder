@@ -11,7 +11,7 @@ export async function GET(request: NextRequest) {
   const maxReadyTime = searchParams.get('maxReadyTime');
 
   try {
-    const params: Record<string, string> = {
+    const params: Record<string, string | number> = {
       apiKey: API_KEY,
     };
     if (query) params.query = query;

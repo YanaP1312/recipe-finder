@@ -6,9 +6,9 @@ const BASE_URL = 'https://api.spoonacular.com/recipes';
 
 export async function GET(
   request: NextRequest,
-  { params }: { params: { id: string } },
+  context: { params: { id: string } },
 ) {
-  const { id } = params;
+  const { id } = context.params;
 
   try {
     const response = await axios.get(`${BASE_URL}/${id}/information`, {
